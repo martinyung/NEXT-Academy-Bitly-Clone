@@ -10,6 +10,9 @@ post '/urls' do
 end
 
 get '/:shortened_url' do
-	ori_url = Url.find_by(shortened_url: params['shortened_url']).long_url
-	redirect 'https://' + ori_url
+	target = Url.find_by(shortened_url: params['shortened_url'])
+	ori_url = target.long_url
+	target.click_count = target.click_count.to_i + 1
+	target.save!
+	redirect ori_url
 end

@@ -10,13 +10,13 @@
 <h2><%=Url.last.shortened_url if Url.last != nil %></h2>
 
 <table>
-	<tr>
-		<th>shortened_url</th>th>
-	</tr>tr>
+		<th>Shortened Url</th>
+		<th>Click Count</th>
+	</tr>
 <% Url.all.each do |link| %>
-	<tr>
 		<td><%= link.shortened_url %></td>
-	</tr>tr>
+		<td><%= link.click_count %></td>
+	</tr>
 <% end %>
 </table>		
 
