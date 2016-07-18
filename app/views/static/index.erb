@@ -1,10 +1,22 @@
-<h1>Hello World</h1>
+<h1>Welcom to bit.url</h1>
 <p>See Me in views/static/index.html.erb</p>
 
 <form action="urls" method="post">
 	ENTER URL:
 	<input type ="text" name="long_url">
 	<input type="submit" value="Submit">
-</form>form>
+</form>
 
-<h2><% Url.last.shortened_url if Url.last != nil %><h2>
+<h2><%=Url.last.shortened_url if Url.last != nil %></h2>
+
+<table>
+	<tr>
+		<th>shortened_url</th>th>
+	</tr>tr>
+<% Url.all.each do |link| %>
+	<tr>
+		<td><%= link.shortened_url %></td>
+	</tr>tr>
+<% end %>
+</table>		
+
