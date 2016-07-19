@@ -1,0 +1,15 @@
+
+<div class="table">
+	<table>
+			<th>Shortened Url</th>
+			<th>Click Count</th>
+		</tr>
+	<% Url.all.each do |link| %>
+			<td><%= link.shortened_url %></td>
+			<td><%= link.click_count %></td>
+		</tr>
+	<% end %>
+	</table>		
+</div>
+
+

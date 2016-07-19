@@ -1,0 +1,73 @@
+.logo {
+	font-style: italic;
+	position: relative;
+	left: 30px;
+	margin-top: 0px;
+	color: darkblue;
+	font-family: Courier;
+	font-weight: 100
+}
+
+.message {
+	color: red;
+}
+
+.main-div {
+	position: relative;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+h2 {
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 30px;
+	font-style: italic;
+	font-weight: 10;
+}
+
+p {
+	text-align: center;
+	font-size: 20px;
+}
+
+input[type=text] {
+	width: 350px;
+	height: 42px;
+	font-size: 16;
+}
+
+form {
+	width: 500px;
+	margin: auto;
+}
+
+input[type=submit] {
+	background-color: orange;
+	border: none;
+	color: white;
+	padding: 15px 28px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+a:link {
+	color: blue;
+}
+a:visited {
+	color: green;
+}
+
+body {
+	background-image: url(http://static1.squarespace.com/static/54aaef8ee4b03ccd2a132a1c/t/54b0e707e4b02eb8a94d9256/1420879624266/6166830_orig.jpg?format=2500w);
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+

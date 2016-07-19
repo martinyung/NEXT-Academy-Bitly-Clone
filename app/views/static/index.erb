@@ -1,28 +1,25 @@
-<h1>Welcome to bit.url</h1>
-<p>See Me in views/static/index.html.erb</p>
 
-<form action="urls" method="post">
-	ENTER URL:
-	<input type ="text" name="long_url">
-	<input type="submit" value="Submit">
-</form>
+<h1 class="logo">minimal.ist</h1>
 
-<% if @messages != nil %>
-	<% @messages.each do |message| %>
-		<p style="color:red"><%= message %></p>
-	<% end %>
-<% end %>	
+<div class="main-div">
+	<h2> SHORTEN. SHARE. MEASURE.</h2>
+	<p> Join minimal.ist, the world's leading link management platform.</p>
+	<form action="urls" method="post">
+		<input type ="text" name="long_url" placeholder="Paste a link to shorten it">
+		<input type="submit" value="SHORTEN">
+	</form>
 
-<h2><%=Url.last.shortened_url if Url.last != nil %></h2>
+	<% if @messages != nil %>
+			<p class="message">Invalid Input</p>
+	<% end %>	
+</div>
 
-<table>
-		<th>Shortened Url</th>
-		<th>Click Count</th>
-	</tr>
-<% Url.all.each do |link| %>
-		<td><%= link.shortened_url %></td>
-		<td><%= link.click_count %></td>
-	</tr>
-<% end %>
-</table>		
+<div class="shortenlink">
+	<a href="<%=Url.last.shortened_url if Url.last != nil %>">
+	<p>Your minimalist Link: <%=Url.last.shortened_url if Url.last != nil %></p></a>
+</div>
+
+
+
+
 

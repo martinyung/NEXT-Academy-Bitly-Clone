@@ -13,8 +13,8 @@ post '/urls' do
 end
 
 get '/:shortened_url' do
-	target = Url.find_by(shortened_url: params['shortened_url'])
-	target.click_count += 1
-	target.save!
-	redirect target.long_url
+	@target = Url.find_by(shortened_url: params['shortened_url'])
+	@target.click_count += 1
+	@target.save!
+	redirect @target.long_url
 end
