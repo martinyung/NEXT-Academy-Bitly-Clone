@@ -1,18 +1,20 @@
 require 'byebug'
+enable :sessions
 
 get '/' do
+	@messages = session[:errors]
   erb :"static/index"
 end
 
 post '/urls' do
-	Url.create(long_url: params["long_url"], shortened_url: Url.shorten)
+	url = Url.create(long_url: params["long_url"], shortened_url: Url.shorten, click_count: 0)
+	session[:errors] = url.errors.messages[:long_url]
 	redirect '/'
 end
 
 get '/:shortened_url' do
 	target = Url.find_by(shortened_url: params['shortened_url'])
-	ori_url = target.long_url
-	target.click_count = target.click_count.to_i + 1
+	target.click_count += 1
 	target.save!
-	redirect ori_url
+	redirect target.long_url
 end
