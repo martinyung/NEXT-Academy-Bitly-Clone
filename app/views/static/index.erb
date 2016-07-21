@@ -1,38 +1,39 @@
 <div class="background"> 
 
-	<h1 class="logo">minimal.ist</h1>
-	
-	<div class="main-div">
-		<h2> SHORTEN. SHARE. MEASURE.</h2>
-		<p> Join minimal.ist, the world's leading link management platform.</p>
-		<form action="urls" method="post">
-			<input type ="text" name="long_url" placeholder="Paste a link to shorten it">
-			<br>
-			<br>
-			<input type="submit" value="SHORTEN">
-		</form>
+	<div class="content">
+		<h1 class="logo">minimal.ist</h1>
+		<div class="main-div">
+			<h2> SHORT. SLEEK. SIMPLE</h2>
+			<p> Use minimal.ist, shorten your long urls into sleek and simple url.</p>
+			<form action="urls" method="post">
+				<input type ="text" name="long_url" placeholder="Paste a link to shorten it">
+				<br>
+				<br>
+				<input type="submit" value="SHORTEN">
+			</form>
+		</div>
+		<button> Previous Shortened Links </button>
+		<p> URLs Shorten: <span id="count"></p>
+		<br>
 	</div>
-
-	<div class="shortenlink">
-		<p id="result"></p>
-	</div>
-
-	<button> Previous Shortened Links </button>
-
-	<div class="table">
-		<table>
-				<th>Shortened Url</th>
-				<th>Click Count</th>
-			</tr>
-		<% Url.all.each do |link| %>
-				<td><%= link.shortened_url %></td>
-				<td><%= link.click_count %></td>
-			</tr>
-		<% end %>
-		</table>		
-	</div>
-
 </div>
+
+<p id="result"> Your Shorten URL Here </p>
+<div class="table">
+	<table>
+			<th>Shortened Url</th>
+			<th>Click Count</th>
+		</tr>
+	<% Url.all.each do |link| %>
+			<td><a href='<%=link.shortened_url %>'><%=link.shortened_url %></a></td>
+			<td><%=link.click_count %></td>
+		</tr>
+	<% end %>
+	</table>		
+</div>
+
+
+
 
 
 

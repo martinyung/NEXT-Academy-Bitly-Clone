@@ -3,19 +3,18 @@
 	position: relative;
 	left: 30px;
 	margin-top: 0px;
-	color: white;
 	font-family: Courier;
 	font-weight: 100
 }
 
-.message {
+.red {
 	color: red;
 }
 
 .main-div {
 	position: relative;
 	margin-top: 100px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .table {
@@ -23,6 +22,10 @@
 	margin: auto;
 	margin-top: 50px;
 	display: none;
+}
+
+#count {
+	color: maroon;
 }
 
 table, th, td {
@@ -38,10 +41,9 @@ th {
 h2 {
 	text-align: center;
 	font-family: Helvetica;
-	font-size: 40px;
+	font-size: 46px;
 	font-style: italic;
 	font-weight: 100;
-	color: maroon;
 }
 
 p {
@@ -75,28 +77,31 @@ a:link {
 	color: blue;
 }
 a:visited {
-	color: green;
+	color: darkblue;
 }
 
 button {
-  border: blue;
-  border-radius: 15px;
-  background-color: white;
-  color: darkblue;
+	position: relative;
+	top: 50px;
+	left: 25px;
+  border: white;
+  border-radius: 100px;
+  background-color: orange;
+  color: white;
   padding: 10px 22px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 14px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-body {
-	background-image: url(https://images.unsplash.com/photo-1468476775582-6bede20f356f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=50c6901b794046c29f94700a8b940ad4);
-	background-size: cover;
+.background {
+	background-image: url(http://www.magic4walls.com/wp-content/uploads/2014/04/telephone-booth-minimalist-wallpaper-birds-shadow-vector-wallpaper.jpg);
+	background-size: 100% 100%;
+	
 }
+
 
 
 

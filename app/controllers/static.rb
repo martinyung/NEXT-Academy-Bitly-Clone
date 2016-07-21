@@ -14,6 +14,10 @@ post '/urls' do
 	end
 end
 
+get '/count' do
+	Url.count.to_json
+end
+
 get '/:shortened_url' do
 	@target = Url.find_by(shortened_url: params['shortened_url'])
 	@target.click_count += 1

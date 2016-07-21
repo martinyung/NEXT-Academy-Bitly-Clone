@@ -1,4 +1,16 @@
+function getCount() {
+	$.ajax({
+		url:'/count',
+		dataType: 'json',
+		type: 'GET',
+		success: function(data) {
+			$('#count').html(data)
+		}
+	});
+}
+
 $(document).ready(function() {
+	setInterval(function(){getCount()}, 3000);
 	$("form").on('submit', function(event) {
 		event.preventDefault();
 		$.ajax({
@@ -10,17 +22,16 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data.shortened_url == null) {
 					$('#result').html(data);
-					$(this).addClass('.message');
+					$('#result').addClass('red');
 			} else {
 					$('#result').html("<a href='" + data.shortened_url + "'>" + data.shortened_url + "</a>");
 				}
 			}
 		})
 	})
-})
 
-$(document).ready(function() {
 	$('button').click(function() {
 		$('.table').toggle('slow');
 	});
-});
+})
+
