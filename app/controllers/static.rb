@@ -8,8 +8,11 @@ end
 
 post '/urls' do
 	url = Url.create(long_url: params["long_url"], shortened_url: Url.shorten, click_count: 0)
-	session[:errors] = url.errors.messages[:long_url]
-	redirect '/'
+	if url.valid?
+		url.to_json
+	else
+		url.errors.messages[:long_url][0].to_json
+	end
 end
 
 get '/:shortened_url' do

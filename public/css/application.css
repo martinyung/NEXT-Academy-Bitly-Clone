@@ -3,7 +3,7 @@
 	position: relative;
 	left: 30px;
 	margin-top: 0px;
-	color: darkblue;
+	color: white;
 	font-family: Courier;
 	font-weight: 100
 }
@@ -18,12 +18,30 @@
 	margin-bottom: 40px;
 }
 
+.table {
+	width:300px;
+	margin: auto;
+	margin-top: 50px;
+	display: none;
+}
+
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+	width: 300px;
+}
+
+th {
+	background-color: lightblue;
+}
+
 h2 {
 	text-align: center;
 	font-family: Helvetica;
-	font-size: 30px;
+	font-size: 40px;
 	font-style: italic;
-	font-weight: 10;
+	font-weight: 100;
+	color: maroon;
 }
 
 p {
@@ -32,9 +50,10 @@ p {
 }
 
 input[type=text] {
-	width: 350px;
-	height: 42px;
+	padding: 12px 160px;
 	font-size: 16;
+	text-align: center;
+	margin: auto;
 }
 
 form {
@@ -47,7 +66,8 @@ input[type=submit] {
 	border: none;
 	color: white;
 	padding: 15px 28px;
-	margin: 4px 2px;
+	margin-left: 195px;
+	font-size: 11px;
 	cursor: pointer;
 }
 
@@ -58,8 +78,23 @@ a:visited {
 	color: green;
 }
 
+button {
+  border: blue;
+  border-radius: 15px;
+  background-color: white;
+  color: darkblue;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
 body {
-	background-image: url(http://static1.squarespace.com/static/54aaef8ee4b03ccd2a132a1c/t/54b0e707e4b02eb8a94d9256/1420879624266/6166830_orig.jpg?format=2500w);
+	background-image: url(https://images.unsplash.com/photo-1468476775582-6bede20f356f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=50c6901b794046c29f94700a8b940ad4);
 	background-size: cover;
 }
 

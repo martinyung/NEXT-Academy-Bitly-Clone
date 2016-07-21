@@ -6,6 +6,9 @@ class Url < ActiveRecord::Base
 	validates :shortened_url, uniqueness: true
 
 	def self.shorten
-		((('a'..'z').to_a + (0..9).to_a)*3).shuffle[0,5.to_i].join
+		((('a'..'z').to_a + (0..9).to_a)*3).shuffle[0,6.to_i].join
 	end
 end
+
+
+
