@@ -24,7 +24,7 @@ $(document).ready(function() {
 					$('#result').html(data);
 					$('#result').addClass('red');
 			} else {
-					$('#result').html("<a href='" + data.shortened_url + "'>" + data.shortened_url + "</a>");
+					$('#result').html("<a href='" + data.shortened_url + "'>"  + window.location.origin + '/' + data.shortened_url + "</a>");
 				}
 			}
 		})
